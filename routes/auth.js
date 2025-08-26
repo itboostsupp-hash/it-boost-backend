@@ -36,64 +36,64 @@ router.post('/register', async (req, res) => {
 
     await user.save();
 
-    // 👇 Welcome email
-  const mailOptions = {
-  from: '"IT BOOST 🚀" <no-reply@yourdomain.com>',
-  to: user.email,
-  subject: "Welcome to IT BOOST!",
-  html: `
-  <div style="font-family: 'Helvetica Neue', Arial, sans-serif; background: #f0f8ff url('https://i.ibb.co/2yR7T5D/rocket-bg.png') no-repeat top right; padding: 40px; color: #333;">
-    
-    <!-- Logo -->
-    <div style="text-align: center; margin-bottom: 25px;">
-      <img src="https://i.ibb.co/x1V2g5p/itboost-logo.png" alt="IT BOOST Logo" style="width: 130px; height: auto; filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.3));">
-    </div>
+     // 👇 Welcome email
+    const mailOptions = {
+      from: '"ITZ BOOST 🚀" <no-reply@yourdomain.com>',
+      to: user.email,
+      subject: "Welcome to ITZ BOOST!",
+      html: `
+      <div style="font-family: 'Helvetica Neue', Arial, sans-serif; background: #f0f8ff url('https://i.ibb.co/2yR7T5D/rocket-bg.png') no-repeat top right; padding: 40px; color: #333;">
+        
+        <!-- Logo -->
+        <div style="text-align: center; margin-bottom: 25px;">
+          <img src="https://i.ibb.co/x1V2g5p/itboost-logo.png" alt="ITZ BOOST Logo" style="width: 130px; height: auto; filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.3));">
+        </div>
 
-    <!-- Header -->
-    <h1 style="text-align: center; font-size: 30px; color: #007bff; margin-bottom: 15px;">
-      🚀 Welcome to IT BOOST, ${user.name}!
-    </h1>
+        <!-- Header -->
+        <h1 style="text-align: center; font-size: 30px; color: #007bff; margin-bottom: 15px;">
+          🚀 Welcome to ITZ BOOST, ${user.name}!
+        </h1>
 
-    <!-- Subtitle -->
-    <p style="text-align: center; font-size: 18px; color: #555; margin-bottom: 30px;">
-      Skyrocket your social media presence with our smart and easy tools!
-    </p>
+        <!-- Subtitle -->
+        <p style="text-align: center; font-size: 18px; color: #555; margin-bottom: 30px;">
+          Skyrocket your social media presence with our smart and easy tools!
+        </p>
 
-    <!-- CTA Button -->
-    <div style="text-align: center; margin-bottom: 35px;">
-      <a href="http://localhost:3000/login" 
-         style="display: inline-block; padding: 14px 30px; font-size: 18px; font-weight: bold; color: #fff; background: linear-gradient(90deg, #28a745, #218838); text-decoration: none; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: all 0.3s;">
-         Login & Start Boosting
-      </a>
-    </div>
+        <!-- CTA Button -->
+        <div style="text-align: center; margin-bottom: 35px;">
+          <a href="https://it-boost-backend.onrender.com/login" 
+             style="display: inline-block; padding: 14px 30px; font-size: 18px; font-weight: bold; color: #fff; background: linear-gradient(90deg, #28a745, #218838); text-decoration: none; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: all 0.3s;">
+             Login & Start Boosting
+          </a>
+        </div>
 
-    <!-- Info Section -->
-    <p style="text-align: center; font-size: 16px; color: #555; line-height: 1.6;">
-      Your account is now ready. Explore our features and watch your social media accounts grow! <br>
-      If you did not sign up for IT BOOST, please ignore this email.
-    </p>
+        <!-- Info Section -->
+        <p style="text-align: center; font-size: 16px; color: #555; line-height: 1.6;">
+          Your account is now ready. Explore our features and watch your social media accounts grow! <br>
+          If you did not sign up for ITZ BOOST, please ignore this email.
+        </p>
 
-    <!-- Rocket Animation -->
-    <div style="text-align: center; margin-top: 40px;">
-      <img src="https://i.ibb.co/NrsmPLK/rocket-flying.png" alt="Rocket" style="width: 80px; animation: rocketMove 4s infinite alternate;">
-    </div>
+        <!-- Rocket Animation -->
+        <div style="text-align: center; margin-top: 40px;">
+          <img src="https://i.ibb.co/NrsmPLK/rocket-flying.png" alt="Rocket" style="width: 80px; animation: rocketMove 4s infinite alternate;">
+        </div>
 
-    <!-- Footer -->
-    <div style="text-align: center; margin-top: 50px; font-size: 13px; color: #aaa;">
-      © ${new Date().getFullYear()} IT BOOST. All rights reserved.<br>
-      123 Your Street, Your City, Your Country
-    </div>
+        <!-- Footer -->
+        <div style="text-align: center; margin-top: 50px; font-size: 13px; color: #aaa;">
+          © ${new Date().getFullYear()} ITZ BOOST. All rights reserved.<br>
+          123 Your Street, Your City, Your Country
+        </div>
 
-    <style>
-      @keyframes rocketMove {
-        0% { transform: translateY(0px); }
-        50% { transform: translateY(-15px); }
-        100% { transform: translateY(0px); }
-      }
-    </style>
-  </div>
-  `,
-};
+        <style>
+          @keyframes rocketMove {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+          }
+        </style>
+      </div>
+      `,
+    };
 
 
     transporter.sendMail(mailOptions).catch(err => console.error("Email sending error:", err));
