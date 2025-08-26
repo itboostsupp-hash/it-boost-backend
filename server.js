@@ -7,7 +7,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:3000', // ya jo bhi tumhara frontend URL hai
+  origin: 'http://itzboost.com', // ya jo bhi tumhara frontend URL hai
   credentials: true,
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
@@ -35,11 +35,6 @@ app.use('/api/user', userRoutes);
 
 const adminRoutes = require("./routes/admin");
 app.use("/api/admin", adminRoutes);
-
-
-
-
-
 
 mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log("MongoDB Connected"))
