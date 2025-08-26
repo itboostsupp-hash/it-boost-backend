@@ -7,7 +7,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: 'http://itzboost.com', // ya jo bhi tumhara frontend URL hai
+  origin: 'https://itzboost.com', // ya jo bhi tumhara frontend URL hai
   credentials: true,
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
