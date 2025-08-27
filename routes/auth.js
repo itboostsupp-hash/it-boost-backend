@@ -9,12 +9,12 @@ const nodemailer = require("nodemailer");
 
 // 👇 Nodemailer setup
 const transporter = nodemailer.createTransport({
-   host: "smtp.hostinger.com",   // Hostinger SMTP server
-  port: 465,                    // Secure port (use 587 if TLS)
-  secure: true,                 // true for 465, false for 587
+    host: "smtp.hostinger.com",
+  port: 465,
+  secure: true,
   auth: {
-    user: "noreply@itzboost.com",  // tumhara professional email jo hostinger se banaya
-    pass: "Itzboost12345.",  // us email ka password
+    user: process.env.EMAIL_USER || "noreply@itzboost.com",
+    pass: process.env.EMAIL_PASS || "Itzboost12345.", 
   },
 });
 
@@ -40,7 +40,7 @@ router.post('/register', async (req, res) => {
 
      // 👇 Welcome email
     const mailOptions = {
-      from: '"ITZ BOOST 🚀" <no-reply@yourdomain.com>',
+      from: '"ITZ BOOST 🚀" <no-reply@itzboost.com>',
       to: user.email,
       subject: "Welcome to ITZ BOOST!",
       html: `
