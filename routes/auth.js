@@ -13,8 +13,8 @@ const transporter = nodemailer.createTransport({
   port: 465,
   secure: true,
   auth: {
-    user: process.env.EMAIL_USER || "noreply@itzboost.com",
-    pass: process.env.EMAIL_PASS || "Itzboost12345.", 
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS, 
   },
 });
 
@@ -40,7 +40,7 @@ router.post('/register', async (req, res) => {
 
      // 👇 Welcome email
     const mailOptions = {
-      from: '"ITZ BOOST 🚀" <no-reply@itzboost.com>',
+      from: `"IT Boost" <${process.env.EMAIL_USER}>`,
       to: user.email,
       subject: "Welcome to ITZ BOOST!",
       html: `
