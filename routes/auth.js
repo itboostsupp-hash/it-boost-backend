@@ -40,7 +40,7 @@ router.post('/register', async (req, res) => {
 
      // 👇 Welcome email
     const mailOptions = {
-      from: `"IT Boost" <${process.env.EMAIL_USER}>`,
+      from: `"ITZ Boost" <${process.env.EMAIL_USER}>`,
       to: user.email,
       subject: "Welcome to ITZ BOOST!",
       html: `
@@ -83,7 +83,7 @@ router.post('/register', async (req, res) => {
         <!-- Footer -->
         <div style="text-align: center; margin-top: 50px; font-size: 13px; color: #aaa;">
           © ${new Date().getFullYear()} ITZ BOOST. All rights reserved.<br>
-          123 Your Street, Your City, Your Country
+          , Pakistan
         </div>
 
         <style>
