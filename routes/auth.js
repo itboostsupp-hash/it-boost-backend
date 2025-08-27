@@ -44,11 +44,11 @@ router.post('/register', async (req, res) => {
       to: user.email,
       subject: "Welcome to ITZ BOOST!",
       html: `
-      <div style="font-family: 'Helvetica Neue', Arial, sans-serif; background: #f0f8ff url('https://i.ibb.co/2yR7T5D/rocket-bg.png') no-repeat top right; padding: 40px; color: #333;">
+      <div style="font-family: 'Helvetica Neue', Arial, sans-serif; background: #f0f8ff url('https://em-content.zobj.net/source/microsoft-teams/363/rocket_1f680.png') no-repeat top right; padding: 40px; color: #333;">
         
         <!-- Logo -->
         <div style="text-align: center; margin-bottom: 25px;">
-          <img src="https://i.ibb.co/x1V2g5p/itboost-logo.png" alt="ITZ BOOST Logo" style="width: 130px; height: auto; filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.3));">
+          <img src="https://itzboost.com/logo192.png" alt="ITZ BOOST Logo" style="width: 130px; height: auto; filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.3));">
         </div>
 
         <!-- Header -->
@@ -77,7 +77,7 @@ router.post('/register', async (req, res) => {
 
         <!-- Rocket Animation -->
         <div style="text-align: center; margin-top: 40px;">
-          <img src="https://i.ibb.co/NrsmPLK/rocket-flying.png" alt="Rocket" style="width: 80px; animation: rocketMove 4s infinite alternate;">
+          <img src="https://em-content.zobj.net/source/microsoft-teams/363/rocket_1f680.png" alt="Rocket" style="width: 80px; animation: rocketMove 4s infinite alternate;">
         </div>
 
         <!-- Footer -->
