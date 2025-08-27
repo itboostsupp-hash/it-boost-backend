@@ -9,10 +9,12 @@ const nodemailer = require("nodemailer");
 
 // 👇 Nodemailer setup
 const transporter = nodemailer.createTransport({
-   service: "Gmail", // ya apka SMTP provider
+   host: "smtp.hostinger.com",   // Hostinger SMTP server
+  port: 465,                    // Secure port (use 587 if TLS)
+  secure: true,                 // true for 465, false for 587
   auth: {
-    user: "no-reply@itboost.com",  // ✅ Real email
-    pass: "REAL_EMAIL_PASSWORD_OR_APP_PASSWORD", // ✅ App password
+    user: "noreply@itzboost.com",  // tumhara professional email jo hostinger se banaya
+    pass: "Itzboost12345.",  // us email ka password
   },
 });
 
@@ -61,7 +63,7 @@ router.post('/register', async (req, res) => {
 
         <!-- CTA Button -->
         <div style="text-align: center; margin-bottom: 35px;">
-          <a href="https://it-boost-backend.onrender.com/login" 
+          <a href="https://itzboost.com/login" 
              style="display: inline-block; padding: 14px 30px; font-size: 18px; font-weight: bold; color: #fff; background: linear-gradient(90deg, #28a745, #218838); text-decoration: none; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: all 0.3s;">
              Login & Start Boosting
           </a>
