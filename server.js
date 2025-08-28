@@ -36,6 +36,9 @@ app.use('/api/user', userRoutes);
 const adminRoutes = require("./routes/admin");
 app.use("/api/admin", adminRoutes);
 
+const reviewRoutes = require("./routes/review");
+app.use("/api/review", reviewRoutes);
+
 mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log("MongoDB Connected"))
     .catch(err => console.error(err));
